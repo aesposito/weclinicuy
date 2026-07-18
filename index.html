@@ -1,210 +1,170 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-UY">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WeClinic — Consultorios por turno fijo en el centro de Montevideo</title>
-<meta name="description" content="Alquilá un consultorio equipado por turno fijo semanal en Río Branco y 18 de Julio. Para odontólogos, terapeutas corporales y profesionales de la estética. Sin alquilar un consultorio entero.">
+<title>Alquiler de consultorios en Montevideo por turno | WeClinic</title>
+<meta name="description" content="Alquiler de consultorios equipados en el centro de Montevideo (Río Branco y 18 de Julio). Turno fijo semanal u horas sueltas, para odontólogos, terapeutas y estética. Sin alquilar un consultorio entero.">
+<link rel="canonical" href="https://weclinic.uy/">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
-<meta property="og:title" content="WeClinic — Tu consultorio, sólo los días que atendés">
-<meta property="og:description" content="Turno fijo semanal en pleno centro de Montevideo. Consultorio equipado, sala de espera y espacio propio. Sin alquilar un consultorio entero.">
+<meta property="og:site_name" content="WeClinic">
+<meta property="og:locale" content="es_UY">
+<meta property="og:title" content="Alquiler de consultorios en Montevideo por turno | WeClinic">
+<meta property="og:description" content="Consultorios equipados para alquilar por turno fijo semanal en pleno centro de Montevideo. Odontología, terapia corporal y estética.">
 <meta property="og:image" content="https://weclinic.uy/img/recepcion.jpg">
 <meta property="og:url" content="https://weclinic.uy/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alquiler de consultorios en Montevideo por turno | WeClinic">
+<meta name="twitter:description" content="Consultorios equipados para alquilar por turno fijo semanal en pleno centro de Montevideo.">
+<meta name="twitter:image" content="https://weclinic.uy/img/recepcion.jpg">
 <meta name="theme-color" content="#111111">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --gold:#b67c41;
-    --gold-dark:#966636;
-    --ink:#111111;
-    --body:#4a4a4a;
-    --muted:#8a8a8a;
-    --line:#e8e4de;
-    --cream:#faf8f5;
-    --max:1200px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Open Sans',system-ui,sans-serif;
-    color:var(--body);
-    background:#fff;
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,.display{font-family:'Jost',system-ui,sans-serif;color:var(--ink);font-weight:400;line-height:1.15}
-  a{color:inherit}
-  img{max-width:100%;display:block}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+<link rel="stylesheet" href="css/site.css">
 
-  /* NAV */
-  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .logo{display:block;line-height:0}
-  .logo img{height:34px;width:auto}
-  .nav-links{display:flex;align-items:center;gap:32px}
-  .nav-links a:not(.btn){font-size:14px;text-decoration:none;color:var(--body);transition:color .2s}
-  .nav-links a:not(.btn):hover{color:var(--gold)}
-  a.btn,.btn{
-    display:inline-block;background:var(--gold);color:#fff;text-decoration:none;
-    padding:13px 26px;border-radius:999px;font-size:14px;font-weight:600;
-    letter-spacing:.3px;transition:background .2s,transform .2s;white-space:nowrap;
-  }
-  a.btn:hover,.btn:hover{background:var(--gold-dark);color:#fff;transform:translateY(-1px)}
-  .btn-lg{padding:16px 34px;font-size:15px}
-  a.btn-ghost,.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
-  a.btn-ghost:hover,.btn-ghost:hover{background:var(--cream);border-color:var(--gold);color:var(--gold)}
-  .nav-cta{display:none}
-
-  /* HERO */
-  .hero{padding:80px 0 96px}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
-  .eyebrow{
-    display:inline-block;font-size:12px;letter-spacing:2px;text-transform:uppercase;
-    color:var(--gold);font-weight:600;margin-bottom:22px;
-  }
-  h1{font-size:clamp(38px,5vw,60px);letter-spacing:-1.5px;margin-bottom:24px}
-  h1 em{font-style:normal;color:var(--gold)}
-  .lede{font-size:18px;max-width:520px;margin-bottom:20px}
-  .hero-note{font-size:15px;color:var(--muted);margin-bottom:34px;max-width:480px}
-  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-  .hero-img{position:relative}
-  .hero-img img{
-    border-radius:6px;width:100%;
-    height:clamp(380px,52vh,500px);
-    object-fit:cover;object-position:center 42%;
-  }
-
-  /* SECTIONS */
-  section{padding:96px 0}
-  .band{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .sec-head{max-width:640px;margin-bottom:60px}
-  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
-  h2{font-size:clamp(30px,3.6vw,42px);letter-spacing:-1px;margin-bottom:16px}
-  .sec-head p{font-size:17px}
-
-  /* PASOS */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
-  .step-num{
-    font-family:'Jost',sans-serif;font-size:15px;font-weight:600;color:var(--gold);
-    letter-spacing:1px;margin-bottom:18px;display:flex;align-items:center;gap:12px;
-  }
-  .step-num::after{content:'';flex:1;height:1px;background:var(--line)}
-  .step h3{font-size:23px;margin-bottom:12px}
-  .step p{font-size:15px}
-
-  /* PANEL APP */
-  .panel{
-    border:1px solid var(--line);border-radius:6px;background:#fff;
-    padding:54px 56px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;
-  }
-  .panel-tag{
-    display:inline-block;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;
-    color:var(--gold);font-weight:600;margin-bottom:16px;
-  }
-  .panel h2{font-size:clamp(26px,2.8vw,34px);margin-bottom:14px}
-  .panel p{font-size:16px}
-  .uses{list-style:none}
-  .uses li{
-    font-size:15px;color:var(--ink);padding:16px 0 16px 26px;
-    border-bottom:1px solid var(--line);position:relative;
-  }
-  .uses li:first-child{padding-top:0}
-  .uses li:last-child{border-bottom:0;padding-bottom:0}
-  .uses li::before{
-    content:'';position:absolute;left:0;top:24px;width:8px;height:8px;
-    border-radius:50%;border:2px solid var(--gold);
-  }
-  .uses li:first-child::before{top:8px}
-
-  /* ESPECIALIDADES */
-  .specs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .spec{
-    background:#fff;border:1px solid var(--line);border-radius:6px;padding:38px 32px;
-    transition:border-color .25s,transform .25s;
-  }
-  .spec:hover{border-color:var(--gold);transform:translateY(-3px)}
-  .spec h3{font-size:22px;margin-bottom:10px}
-  .spec p{font-size:15px}
-  .spec-icon{color:var(--gold);margin-bottom:20px;line-height:0}
-  .spec-icon svg{width:38px;height:38px}
-  .spec-mark{width:34px;height:2px;background:var(--gold);margin-bottom:24px}
-  .spec .quote{font-family:'Jost',sans-serif;font-size:18px;line-height:1.5;color:var(--ink);margin-bottom:20px}
-  .spec .quote-by{font-size:13px;color:var(--muted);letter-spacing:.3px}
-
-  /* GALERIA */
-  .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-  .shot{position:relative;overflow:hidden;border-radius:6px;background:var(--cream)}
-  .shot img{aspect-ratio:1/1;object-fit:cover;width:100%;height:auto;transition:transform .5s}
-  .shot:hover img{transform:scale(1.04)}
-  .shot figcaption{
-    position:absolute;left:0;right:0;bottom:0;padding:28px 18px 16px;
-    background:linear-gradient(transparent,rgba(0,0,0,.72));
-    color:#fff;font-size:13px;letter-spacing:.4px;
-  }
-
-  /* NOSOTRAS */
-  .about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-  .about-img img{border-radius:6px;aspect-ratio:1/1;object-fit:cover;width:100%;height:auto}
-  .about h2{margin-bottom:20px}
-  .about-lead{font-size:18px;color:var(--ink);margin-bottom:28px}
-  .founder{padding:22px 0;border-top:1px solid var(--line)}
-  .founder-name{
-    font-family:'Jost',sans-serif;font-size:17px;color:var(--ink);margin-bottom:6px;
-  }
-  .founder-name span{color:var(--gold);font-size:13px;letter-spacing:.4px;margin-left:6px}
-  .founder p{font-size:15px}
-
-  /* UBICACION */
-  .loc-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
-  .addr{font-family:'Jost',sans-serif;font-size:27px;color:var(--ink);line-height:1.4;margin-bottom:14px}
-  .loc-list{list-style:none;margin-top:28px}
-  .loc-list li{font-size:15px;padding-left:22px;position:relative;margin-bottom:9px}
-  .loc-list li::before{content:'';position:absolute;left:0;top:11px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
-  .map{border:0;width:100%;height:380px;border-radius:6px;filter:grayscale(1);transition:filter .4s}
-  .map:hover{filter:grayscale(0)}
-
-  /* CTA FINAL */
-  .cta{background:var(--ink);color:#fff;text-align:center;padding:104px 0}
-  .cta h2{color:#fff;margin-bottom:18px}
-  .cta p{color:#b5b5b5;font-size:17px;max-width:480px;margin:0 auto 36px}
-  .cta .btn{background:var(--gold)}
-  .cta .btn:hover{background:#c88f52}
-  .cta-alt{margin-top:26px;font-size:14px;color:#8a8a8a}
-  .cta-alt a{color:#d9d9d9}
-
-  /* FOOTER */
-  footer{padding:44px 0;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
-  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-  .foot a{text-decoration:none}
-  .foot a:hover{color:var(--gold)}
-  .foot-links{display:flex;gap:24px}
-
-  /* RESPONSIVE */
-  @media(min-width:720px){.nav-cta{display:inline-block}}
-  @media(max-width:960px){
-    .hero-grid{grid-template-columns:1fr;gap:44px}
-    .hero-img{order:-1}
-    .hero-img img{height:300px}
-    .steps{grid-template-columns:1fr;gap:38px}
-    .specs{grid-template-columns:1fr}
-    .loc-grid{grid-template-columns:1fr;gap:36px}
-    .panel{grid-template-columns:1fr;gap:34px;padding:44px 40px}
-    .about{grid-template-columns:1fr;gap:36px}
-  }
-  @media(max-width:560px){
-    section{padding:68px 0}
-    .hero{padding:52px 0 68px}
-    .nav-links a:not(.btn){display:none}
-    .sec-head{margin-bottom:42px}
-    .gallery{grid-template-columns:1fr;gap:16px}
-    .panel{padding:34px 26px}
-  }
-</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "MedicalClinic"],
+      "@id": "https://weclinic.uy/#business",
+      "name": "WeClinic",
+      "description": "Alquiler de consultorios equipados por turno fijo semanal u horas sueltas en el centro de Montevideo, para odontólogos, terapeutas corporales y profesionales de la estética.",
+      "url": "https://weclinic.uy/",
+      "logo": "https://weclinic.uy/img/logo.png",
+      "image": [
+        "https://weclinic.uy/img/recepcion.jpg",
+        "https://weclinic.uy/img/odontologia.jpg",
+        "https://weclinic.uy/img/terapia.jpg"
+      ],
+      "email": "info@weclinic.uy",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Río Branco esq. 18 de Julio",
+        "addressLocality": "Montevideo",
+        "addressRegion": "Montevideo",
+        "postalCode": "11100",
+        "addressCountry": "UY"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.9060,
+        "longitude": -56.1922
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Montevideo"
+      },
+      "sameAs": ["https://instagram.com/weclinicuy"]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://weclinic.uy/#servicio",
+      "name": "Alquiler de consultorios en Montevideo",
+      "serviceType": "Alquiler de consultorios médicos y odontológicos",
+      "provider": { "@id": "https://weclinic.uy/#business" },
+      "areaServed": { "@type": "City", "name": "Montevideo" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Consultorios disponibles",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Alquiler de consultorio odontológico en Montevideo",
+              "description": "Consultorio odontológico equipado con sillón dental, por turno fijo semanal u horas sueltas."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Alquiler de consultorio para terapia corporal en Montevideo",
+              "description": "Consultorio equipado con camilla para masajes, fisioterapia y terapias corporales."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Alquiler de consultorio de estética en Montevideo",
+              "description": "Consultorio privado y equipado para tratamientos estéticos."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://weclinic.uy/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo funciona el alquiler de consultorios en WeClinic?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Alquilás un turno fijo semanal —una mañana o una tarde de un día concreto— y ese turno queda reservado a tu nombre todas las semanas. El consultorio está equipado y listo: vos traés a tus pacientes. No alquilás un consultorio entero ni pagás los días que no atendés."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde quedan los consultorios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En Río Branco y 18 de Julio, pleno centro de Montevideo. Está a metros de 18 de Julio, conectado con las principales líneas de ómnibus y con estacionamientos y servicios en la zona."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo alquilar un consultorio odontológico por horas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Además de tu turno fijo, desde la app ves los horarios libres del resto de la semana y reservás por hora cuando lo necesitás: una urgencia, un paciente que sólo puede otro día o una hora extra cuando se te llena la agenda."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué especialidades pueden alquilar un consultorio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tenemos consultorios preparados para odontología (con sillón dental), terapia corporal (con camilla) y estética. Si tu especialidad no está en la lista, escribinos y vemos si el espacio te sirve."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué incluye el alquiler del consultorio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El consultorio equipado, sala de espera para tus pacientes y un espacio propio donde trabajar entre consultas. Sumado al acceso a la app para reservar horas sueltas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto sale alquilar un consultorio en Montevideo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El precio depende del turno y de la especialidad. Escribinos por Instagram o a info@weclinic.uy contándonos qué días necesitás y te pasamos la disponibilidad y el valor."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://weclinic.uy/#website",
+      "url": "https://weclinic.uy/",
+      "name": "WeClinic",
+      "inLanguage": "es-UY",
+      "publisher": { "@id": "https://weclinic.uy/#business" }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -214,8 +174,10 @@
     <nav class="nav-links">
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#espacios">Espacios</a>
+      <a href="consultorio-odontologico-montevideo/index.html">Odontología</a>
       <a href="#nosotras">Nosotras</a>
       <a href="#ubicacion">Ubicación</a>
+      <a href="#preguntas">Preguntas</a>
       <a class="btn nav-cta" href="https://ig.me/m/weclinicuy" target="_blank" rel="noopener">Escribinos</a>
     </nav>
   </div>
@@ -225,11 +187,12 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Consultorios por turno · Montevideo centro</span>
-      <h1>Tu consultorio,<br>sólo los días<br>que <em>atendés</em>.</h1>
+      <span class="eyebrow">Alquiler de consultorios · Montevideo centro</span>
+      <h1>Tu consultorio en Montevideo,<br>sólo los días<br>que <em>atendés</em>.</h1>
       <p class="lede">
-        Alquilá un turno fijo por semana —todos los lunes de tarde, todos los miércoles
-        de mañana— en un consultorio equipado y listo para recibir a tus pacientes.
+        Alquilá un consultorio equipado en pleno centro de Montevideo por turno fijo
+        semanal —todos los lunes de tarde, todos los miércoles de mañana— listo para
+        recibir a tus pacientes.
       </p>
       <p class="hero-note">
         Sin alquilar un consultorio entero. Y si necesitás otro horario,
@@ -298,7 +261,7 @@
 <section id="espacios">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Para tu especialidad</h2>
+      <h2>Consultorios en alquiler según tu especialidad</h2>
       <p>Cada espacio está preparado para el tipo de atención que das.</p>
     </div>
     <div class="specs">
@@ -308,8 +271,8 @@
             <path d="M12 5.5c-1.5-1-3-1.5-4.5-1.5C5 4 3 5.5 3 8.5c0 2 .5 3.5 1.5 5.5.5 1 1 2.5 1.5 4 .5 1.5 1 2 2 2s1.5-.5 2-2c.5-1.5.5-3 1-4 .5-1 1-1 1.5-1s1 0 1.5 1c.5 1 .5 2.5 1 4 .5 1.5 1 2 2 2s1.5-.5 2-2c.5-1.5 1-3 1.5-4 1-2 1.5-3.5 1.5-5.5C21 5.5 19 4 16.5 4c-1.5 0-3 .5-4.5 1.5z"/>
           </svg>
         </div>
-        <h3>Odontología</h3>
-        <p>Consultorio con equipamiento moderno y completo, listo para que brindes una atención de alta calidad a tus pacientes.</p>
+        <h3>Consultorio odontológico</h3>
+        <p>Consultorio odontológico en Montevideo con equipamiento moderno y completo, listo para que brindes una atención de alta calidad a tus pacientes. <a href="consultorio-odontologico-montevideo/index.html" style="color:var(--gold);text-decoration:none;font-weight:600">Ver el consultorio dental →</a></p>
       </div>
       <div class="spec">
         <div class="spec-icon" aria-hidden="true">
@@ -318,8 +281,8 @@
             <path d="M9 18c6.2 0 10.5-3.3 11-12V4h-4c-9 0-12 4-12 9 0 1 0 3 2 5h3z"/>
           </svg>
         </div>
-        <h3>Terapia corporal</h3>
-        <p>Espacios tranquilos, pensados para crear un entorno propicio para la relajación y la sanación del cuerpo.</p>
+        <h3>Consultorio para terapia corporal</h3>
+        <p>Salas tranquilas con camilla, pensadas para crear un entorno propicio para la relajación y la sanación del cuerpo.</p>
       </div>
       <div class="spec">
         <div class="spec-icon" aria-hidden="true">
@@ -329,7 +292,7 @@
             <path d="M9 18a6 6 0 0 1 6-6 6 6 0 0 1-6-6 6 6 0 0 1-6 6 6 6 0 0 1 6 6z"/>
           </svg>
         </div>
-        <h3>Estética</h3>
+        <h3>Consultorio de estética</h3>
         <p>Un ambiente cuidado para que puedas brindar una atención especializada, con la privacidad que tu trabajo requiere.</p>
       </div>
     </div>
@@ -341,15 +304,15 @@
   <div class="wrap" style="padding-top:96px">
     <div class="sec-head center">
       <h2>El lugar</h2>
-      <p>Así es WeClinic por dentro.</p>
+      <p>Así son por dentro los consultorios de WeClinic en Río Branco y 18 de Julio.</p>
     </div>
     <div class="gallery">
       <figure class="shot">
-        <img src="img/odontologia.jpg" alt="Consultorio odontológico equipado con sillón dental" width="600" height="800" loading="lazy">
+        <img src="img/odontologia.jpg" alt="Consultorio odontológico en alquiler en Montevideo, equipado con sillón dental" width="600" height="800" loading="lazy">
         <figcaption>Consultorio odontológico</figcaption>
       </figure>
       <figure class="shot">
-        <img src="img/terapia.jpg" alt="Sala de terapia corporal con camilla y escritorio" width="600" height="800" loading="lazy">
+        <img src="img/terapia.jpg" alt="Consultorio para terapia corporal en alquiler en el centro de Montevideo, con camilla y escritorio" width="600" height="800" loading="lazy">
         <figcaption>Sala de terapia corporal</figcaption>
       </figure>
       <figure class="shot">
@@ -462,6 +425,42 @@
           loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           title="Mapa de la ubicación de WeClinic en Río Branco y 18 de Julio, Montevideo"></iframe>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="preguntas" class="band">
+  <div class="wrap">
+    <div class="sec-head center">
+      <h2>Preguntas frecuentes</h2>
+      <p>Lo que más nos consultan sobre alquilar un consultorio en Montevideo.</p>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>¿Cómo funciona el alquiler de consultorios en WeClinic?</summary>
+        <p>Alquilás un turno fijo semanal —una mañana o una tarde de un día concreto— y ese turno queda reservado a tu nombre todas las semanas. El consultorio está equipado y listo: vos traés a tus pacientes. No alquilás un consultorio entero ni pagás los días que no atendés.</p>
+      </details>
+      <details>
+        <summary>¿Dónde quedan los consultorios?</summary>
+        <p>En Río Branco y 18 de Julio, pleno centro de Montevideo. Está a metros de 18 de Julio, conectado con las principales líneas de ómnibus y con estacionamientos y servicios en la zona.</p>
+      </details>
+      <details>
+        <summary>¿Puedo alquilar un consultorio odontológico por horas?</summary>
+        <p>Sí. Además de tu turno fijo, desde la app ves los horarios libres del resto de la semana y reservás por hora cuando lo necesitás: una urgencia, un paciente que sólo puede otro día o una hora extra cuando se te llena la agenda.</p>
+      </details>
+      <details>
+        <summary>¿Qué especialidades pueden alquilar un consultorio?</summary>
+        <p>Tenemos consultorios preparados para odontología (con sillón dental), terapia corporal (con camilla) y estética. Si tu especialidad no está en la lista, escribinos y vemos si el espacio te sirve.</p>
+      </details>
+      <details>
+        <summary>¿Qué incluye el alquiler del consultorio?</summary>
+        <p>El consultorio equipado, sala de espera para tus pacientes y un espacio propio donde trabajar entre consultas. Sumado al acceso a la app para reservar horas sueltas.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto sale alquilar un consultorio en Montevideo?</summary>
+        <p>El precio depende del turno y de la especialidad. Escribinos por <a href="https://ig.me/m/weclinicuy" target="_blank" rel="noopener" style="color:var(--gold)">Instagram</a> o a <a href="mailto:info@weclinic.uy" style="color:var(--gold)">info@weclinic.uy</a> contándonos qué días necesitás y te pasamos la disponibilidad y el valor.</p>
+      </details>
     </div>
   </div>
 </section>
