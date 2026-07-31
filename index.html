@@ -306,70 +306,93 @@
       <h2>El lugar</h2>
       <p>Así son por dentro los consultorios de WeClinic en Río Branco y 18 de Julio.</p>
     </div>
+    <!--
+      Cada foto abre en grande al hacer click. Para sumar otra, copiá un
+      <figure class="shot"> entero: el visor toma solas todas las que haya.
+      data-caption es el texto que se ve abajo en el visor (repetí el figcaption).
+      data-full es opcional: poné ahí la versión en alta si existe; si no está,
+      el visor usa la misma foto de la grilla.
+    -->
     <div class="gallery">
       <figure class="shot">
-        <img src="img/odontologia.jpg" alt="Consultorio odontológico en alquiler en Montevideo, equipado con sillón dental" width="600" height="800" loading="lazy">
+        <button type="button" class="shot-btn" data-caption="Consultorio odontológico" aria-label="Ver más grande: consultorio odontológico">
+          <img src="img/odontologia.jpg" alt="Consultorio odontológico en alquiler en Montevideo, equipado con sillón dental" width="600" height="800" loading="lazy">
+        </button>
         <figcaption>Consultorio odontológico</figcaption>
       </figure>
       <figure class="shot">
-        <img src="img/terapia.jpg" alt="Consultorio para terapia corporal en alquiler en el centro de Montevideo, con camilla y escritorio" width="600" height="800" loading="lazy">
+        <button type="button" class="shot-btn" data-caption="Sala de terapia corporal" aria-label="Ver más grande: sala de terapia corporal">
+          <img src="img/terapia.jpg" alt="Consultorio para terapia corporal en alquiler en el centro de Montevideo, con camilla y escritorio" width="600" height="800" loading="lazy">
+        </button>
         <figcaption>Sala de terapia corporal</figcaption>
       </figure>
       <figure class="shot">
-        <img src="img/recepcion-sm.jpg" alt="Sala de espera de WeClinic" width="600" height="800" loading="lazy">
+        <button type="button" class="shot-btn" data-caption="Sala de espera" data-full="img/recepcion.jpg" aria-label="Ver más grande: sala de espera">
+          <img src="img/recepcion-sm.jpg" alt="Sala de espera de WeClinic" width="600" height="800" loading="lazy">
+        </button>
         <figcaption>Sala de espera</figcaption>
       </figure>
       <figure class="shot">
-        <img src="img/espacio-trabajo.jpg" alt="Espacio común de trabajo con mesa y sillas" width="600" height="800" loading="lazy">
+        <button type="button" class="shot-btn" data-caption="Espacio para vos" aria-label="Ver más grande: espacio común de trabajo">
+          <img src="img/espacio-trabajo.jpg" alt="Espacio común de trabajo con mesa y sillas" width="600" height="800" loading="lazy">
+        </button>
         <figcaption>Espacio para vos</figcaption>
       </figure>
     </div>
   </div>
 </section>
 
-<!--
-  ══════════════════════════════════════════════════════════════════════
-  TESTIMONIOS — OCULTOS. El diseño está listo; falta el contenido real.
-
-  PARA ACTIVAR, cuando tengas 2 o 3 frases de profesionales que alquilan
-  (o alquilaron), con permiso para usar nombre y especialidad:
-
-    1. Borrá la línea de apertura del comentario (la que abre este bloque,
-       arriba de todo) y la línea de cierre, que está marcada abajo como
-       FIN TESTIMONIOS OCULTOS.
-    2. Reemplazá cada [corchete] por lo real. Si sólo conseguís 2 frases,
-       borrá el tercer bloque div.spec entero.
-
-  No la publiques con los corchetes puestos ni con frases inventadas.
-  ══════════════════════════════════════════════════════════════════════
-
-<section>
+<!-- TESTIMONIOS -->
+<section id="testimonios">
   <div class="wrap">
     <div class="sec-head center">
-      <h2>Quiénes trabajan acá</h2>
-      <p>Profesionales que eligieron WeClinic para atender a sus pacientes.</p>
+      <h2>Nos eligieron</h2>
+      <p>Algunos de los profesionales que atienden a sus pacientes en WeClinic.</p>
     </div>
-    <div class="specs">
-      <div class="spec">
+    <!--
+      PARA SUMAR OTRO TESTIMONIO: copiá el bloque <figure class="quote-card">
+      entero y pegalo justo debajo, con la frase, el nombre y la foto nuevos.
+      El diseño se acomoda solo: con uno se muestra apaisado (foto al costado)
+      y con dos o tres pasa a tarjetas en columnas. No hay nada más que tocar.
+
+      Sólo frases reales, con permiso del profesional para usar nombre y foto.
+    -->
+    <div class="quotes">
+      <figure class="quote-card">
         <div class="spec-mark"></div>
-        <p class="quote">"[Frase real del profesional. Dos o tres líneas alcanzan: qué necesitaba y cómo lo resolvió acá.]"</p>
-        <p class="quote-by">[Nombre] · [Especialidad]</p>
-      </div>
-      <div class="spec">
+        <blockquote>
+          Llegué a WeClinic buscando un consultorio para empezar a atender a mis
+          pacientes y <strong>quedé fascinada con la elección</strong>. Me permitió
+          desarrollarme profesionalmente y darles una atención de primera, en un lugar
+          impecable, armonioso y moderno. Y sus dueñas están atentas a cada detalle
+          para que nos sintamos cómodos.
+        </blockquote>
+        <figcaption>
+          <img class="quote-photo" src="img/damiana-aleman.jpg"
+               alt="Damiana Alemán, odontóloga en WeClinic"
+               width="320" height="320" loading="lazy">
+          <span class="quote-who">Damiana Alemán<span class="quote-role">Odontóloga</span></span>
+        </figcaption>
+      </figure>
+      <figure class="quote-card">
         <div class="spec-mark"></div>
-        <p class="quote">"[Frase real del profesional. Dos o tres líneas alcanzan: qué necesitaba y cómo lo resolvió acá.]"</p>
-        <p class="quote-by">[Nombre] · [Especialidad]</p>
-      </div>
-      <div class="spec">
-        <div class="spec-mark"></div>
-        <p class="quote">"[Frase real del profesional. Dos o tres líneas alcanzan: qué necesitaba y cómo lo resolvió acá.]"</p>
-        <p class="quote-by">[Nombre] · [Especialidad]</p>
-      </div>
+        <blockquote>
+          Desde el primer día <strong>me siento cómoda, acompañada y con todo lo
+          necesario</strong> para dar un servicio de calidad. Además cuento siempre con
+          Fernanda y Jéssica, que están a disposición ante cualquier consulta. Sin
+          dudas, es un espacio que me permite trabajar y crecer profesionalmente con
+          mucha tranquilidad.
+        </blockquote>
+        <figcaption>
+          <img class="quote-photo" src="img/salome.jpg"
+               alt="Salomé, terapeuta corporal en WeClinic"
+               width="320" height="320" loading="lazy">
+          <span class="quote-who">Salomé<span class="quote-role">Terapeuta corporal</span></span>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
--->
-<!-- FIN TESTIMONIOS OCULTOS -->
 
 <!-- NOSOTRAS -->
 <section id="nosotras">
@@ -487,6 +510,61 @@
   </div>
 </footer>
 
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<!-- VISOR DE FOTOS (galería "El lugar"). No hay nada que editar acá. -->
+<dialog class="lightbox" id="lightbox" aria-label="Fotos de WeClinic">
+  <div class="lb-stage">
+    <img id="lb-img" src="" alt="">
+    <p class="lb-cap" id="lb-cap"></p>
+  </div>
+  <button type="button" class="lb-btn lb-close" id="lb-close" aria-label="Cerrar">&times;</button>
+  <button type="button" class="lb-btn lb-prev" id="lb-prev" aria-label="Foto anterior">&#8249;</button>
+  <button type="button" class="lb-btn lb-next" id="lb-next" aria-label="Foto siguiente">&#8250;</button>
+</dialog>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+
+(function () {
+  var shots = [].slice.call(document.querySelectorAll('.shot-btn'));
+  var dlg = document.getElementById('lightbox');
+  if (!shots.length || !dlg || typeof dlg.showModal !== 'function') return;
+
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  var nav = shots.length > 1;
+  var at = 0;
+
+  document.getElementById('lb-prev').hidden = !nav;
+  document.getElementById('lb-next').hidden = !nav;
+
+  function show(n) {
+    at = (n + shots.length) % shots.length;
+    var thumb = shots[at].querySelector('img');
+    img.src = shots[at].dataset.full || thumb.src;
+    img.alt = thumb.alt;
+    cap.textContent = shots[at].dataset.caption || '';
+  }
+
+  shots.forEach(function (btn, n) {
+    btn.addEventListener('click', function () { show(n); dlg.showModal(); });
+  });
+
+  // Click en el fondo (fuera de la foto) cierra
+  dlg.addEventListener('click', function (e) {
+    if (e.target === dlg || e.target.classList.contains('lb-stage')) dlg.close();
+  });
+  dlg.addEventListener('keydown', function (e) {
+    if (!nav) return;
+    if (e.key === 'ArrowRight') { e.preventDefault(); show(at + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); show(at - 1); }
+  });
+  // Al cerrar, el foco vuelve a la foto desde la que se abrió
+  dlg.addEventListener('close', function () { shots[at].focus(); });
+
+  document.getElementById('lb-close').addEventListener('click', function () { dlg.close(); });
+  document.getElementById('lb-prev').addEventListener('click', function () { show(at - 1); });
+  document.getElementById('lb-next').addEventListener('click', function () { show(at + 1); });
+})();
+</script>
 </body>
 </html>
