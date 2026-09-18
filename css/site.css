@@ -142,6 +142,9 @@
   .quote-card:hover{border-color:var(--gold);transform:translateY(-3px)}
   /* Con un solo testimonio la tarjeta se ensancha, para que no quede sola y flaca */
   .quote-card:only-child{max-width:660px}
+  /* Con cuatro, dos por fila, así no queda una tarjeta sola abajo */
+  .quote-card:first-child:nth-last-child(4),
+  .quote-card:first-child:nth-last-child(4) ~ .quote-card{flex-basis:420px;max-width:540px}
   .quote-card blockquote{
     flex:1;font-family:'Jost',sans-serif;font-size:17px;line-height:1.55;
     color:var(--ink);margin-bottom:28px;
