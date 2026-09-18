@@ -229,7 +229,7 @@
   .cta p{color:#b5b5b5;font-size:17px;max-width:480px;margin:0 auto 36px}
   .cta .btn{background:var(--gold)}
   .cta .btn:hover{background:#c88f52}
-  .cta-alt{margin-top:26px;font-size:14px;color:#8a8a8a}
+  .cta .cta-alt{margin-top:26px}
   .cta-alt a{color:#d9d9d9}
 
   /* FOOTER */
