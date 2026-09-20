@@ -24,10 +24,30 @@
 
   /* NAV */
   header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:32px;height:72px}
+  .nav-actions{display:flex;align-items:center;gap:12px;flex:none}
   .logo{display:block;line-height:0;flex:none}
   .logo img{height:34px;width:auto}
-  .nav-links{display:flex;align-items:center;gap:32px}
+  .nav-links{display:flex;align-items:center;gap:32px;margin-left:auto}
+  /* El burger: sólo aparece cuando los links no entran en la barra */
+  .nav-toggle{
+    display:none;width:42px;height:42px;flex:none;padding:0;cursor:pointer;
+    align-items:center;justify-content:center;
+    background:#fff;border:1px solid var(--line);border-radius:999px;
+  }
+  .nav-toggle:hover{border-color:var(--gold)}
+  .nav-toggle-bar,.nav-toggle-bar::before,.nav-toggle-bar::after{
+    display:block;width:18px;height:2px;border-radius:2px;background:var(--ink);
+    transition:transform .2s,top .2s,background .2s;
+  }
+  .nav-toggle-bar{position:relative}
+  .nav-toggle-bar::before,.nav-toggle-bar::after{content:'';position:absolute;left:0}
+  .nav-toggle-bar::before{top:-6px}
+  .nav-toggle-bar::after{top:6px}
+  /* Abierto, el burger se vuelve una cruz */
+  .nav-toggle[aria-expanded='true'] .nav-toggle-bar{background:transparent}
+  .nav-toggle[aria-expanded='true'] .nav-toggle-bar::before{top:0;transform:rotate(45deg)}
+  .nav-toggle[aria-expanded='true'] .nav-toggle-bar::after{top:0;transform:rotate(-45deg)}
   .nav-links a:not(.btn){font-size:14px;text-decoration:none;color:var(--body);transition:color .2s}
   .nav-links a:not(.btn):hover{color:var(--gold)}
   a.btn,.btn{
@@ -239,8 +259,19 @@
   .foot-links{display:flex;gap:24px}
 
   /* RESPONSIVE */
-  /* Los links de texto sólo cuando entran: abajo de esto queda el logo y el botón */
-  @media(max-width:1024px){.nav-links a:not(.btn){display:none}}
+  /* Abajo de esto los links no entran en la barra y pasan al menú del burger */
+  @media(max-width:1024px){
+    .nav-toggle{display:inline-flex}
+    .nav-links{
+      position:absolute;left:0;right:0;top:100%;margin:0;
+      display:none;flex-direction:column;align-items:stretch;gap:0;
+      background:#fff;border-bottom:1px solid var(--line);padding:6px 24px 14px;
+      box-shadow:0 14px 24px rgba(0,0,0,.06);
+    }
+    .nav-links.open{display:flex}
+    .nav-links a{font-size:16px;padding:15px 0;border-bottom:1px solid var(--line)}
+    .nav-links a:last-child{border-bottom:0}
+  }
   @media(max-width:960px){
     .hero-grid{grid-template-columns:1fr;gap:44px}
     .hero-img{order:-1}
@@ -275,8 +306,12 @@
     section{padding:68px 0}
     .hero{padding:52px 0 68px}
     .sec-head{margin-bottom:42px}
-    /* En celular el botón dice sólo "WhatsApp", si no se come el logo */
+    /* En celular el botón dice sólo "WhatsApp", si no no entra con el burger */
     .nav-cta-long{display:none}
+    .nav{gap:12px}
+    .nav-actions{gap:10px}
+    .nav-cta{padding:11px 18px}
+    .nav-toggle{width:38px;height:38px}
     .gallery{grid-template-columns:1fr;gap:16px}
     .incl{grid-template-columns:1fr;gap:26px}
     .panel{padding:34px 26px}
