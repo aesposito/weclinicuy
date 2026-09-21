@@ -150,6 +150,9 @@
   .spec-icon{color:var(--gold);margin-bottom:20px;line-height:0}
   .spec-icon svg{width:38px;height:38px}
   .spec-mark{width:34px;height:2px;background:var(--gold);margin-bottom:24px}
+  /* El botón de la tarjeta va en marrón, con borde del mismo color */
+  .spec .btn{margin-top:22px}
+  .spec .btn-ghost{color:var(--gold);border-color:var(--gold)}
 
   /* TESTIMONIOS */
   .quotes{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}
